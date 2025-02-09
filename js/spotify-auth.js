@@ -2,7 +2,10 @@
 class SpotifyAuth {
     constructor() {
         this.clientId = 'c59488b72649421aa125bed35f8fed60'; // Replace with your Spotify Client ID
-        this.redirectUri = musicranking-app.vercel.app;
+
+        const currentOrigin = window.location.origin;
+        
+        this.redirectUri = '${currentOrigin}/'; 
         this.scope = 'user-read-private user-read-email';
     }
 
