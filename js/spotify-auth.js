@@ -3,7 +3,7 @@ class SpotifyAuth {
         this.clientId = 'c59488b72649421aa125bed35f8fed60'; // Replace with your Spotify Client ID
         
         // Determine the environment and set the redirect URI accordingly
-        this.redirectUri = window.location.origin;
+        this.redirectUri = musicranking-app-nkhx.vercel.app
         
         // Remove any trailing slashes
         this.redirectUri = this.redirectUri.replace(/\/$/, '');
