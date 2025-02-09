@@ -2,12 +2,10 @@ class SpotifyAuth {
     constructor() {
         this.clientId = 'c59488b72649421aa125bed35f8fed60'; // Replace with your Spotify Client ID
 
-        // Ensure this matches exactly one of the registered URIs in your Spotify Developer Dashboard
-        if (window.location.hostname === 'localhost') {
-            this.redirectUri = 'http://localhost:3000';  // For local development
-        } else {
-            this.redirectUri = 'https://musicranking-app.vercel.app';  // For production
-        }
+        // Choose a single redirect URI (change based on environment)
+        this.redirectUri = 'https://musicranking-app.vercel.app';  // For production
+        // Or use the following for local development:
+        // this.redirectUri = 'http://localhost:3000';  // For local development
 
         // Ensure no trailing slashes
         this.redirectUri = this.redirectUri.replace(/\/$/, '');
@@ -80,7 +78,7 @@ class SpotifyAuth {
             localStorage.setItem('spotify_access_token', data.access_token);
             localStorage.setItem('spotify_refresh_token', data.refresh_token);
             
-            // Clean up the URL
+            // Clean up the URL after successful login
             window.history.replaceState({}, document.title, this.redirectUri);
         } catch (error) {
             console.error('Token error:', error);
