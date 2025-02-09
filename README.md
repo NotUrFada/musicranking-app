@@ -141,15 +141,3 @@ git push origin feature/YourFeature
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Spotify Web API
-- Vercel for hosting
-- [Font Awesome](https://fontawesome.com) for icons
-
-## 📧 Contact
-
-Your Name - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/your-username/music-ranking-app](https://github.com/your-username/music-ranking-app)
