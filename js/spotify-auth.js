@@ -1,13 +1,9 @@
 class SpotifyAuth {
     constructor() {
-        this.clientId = 'c59488b72649421aa125bed35f8fed60'; // Replace with your Spotify Client ID
+        this.clientId = 'c59488b72649421aa125bed35f8fed60'; 
 
-        // Choose a single redirect URI (change based on environment)
         this.redirectUri = 'https://musicranking-app.vercel.app';  // For production
-        // Or use the following for local development:
-        // this.redirectUri = 'http://localhost:3000';  // For local development
-
-        // Ensure no trailing slashes
+       
         this.redirectUri = this.redirectUri.replace(/\/$/, '');
 
         console.log('Redirect URI:', this.redirectUri); // For debugging
@@ -58,7 +54,7 @@ class SpotifyAuth {
                 code: code,
                 redirect_uri: this.redirectUri,
                 client_id: this.clientId,
-                client_secret: '458350db97d74b51bb52d92b4243f651' // Replace with your Client Secret
+                client_secret: '458350db97d74b51bb52d92b4243f651' 
             });
 
             const response = await fetch(tokenUrl, {
