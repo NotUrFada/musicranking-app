@@ -1,7 +1,7 @@
 // Spotify Authentication Handler
 class SpotifyAuth {
     constructor() {
-        this.clientId = 'YOUR_CLIENT_ID'; // Replace with your Spotify Client ID
+        this.clientId = 'c59488b72649421aa125bed35f8fed60'; // Replace with your Spotify Client ID
         this.redirectUri = window.location.origin;
         this.scope = 'user-read-private user-read-email';
     }
@@ -34,7 +34,7 @@ class SpotifyAuth {
                     code: code,
                     redirect_uri: this.redirectUri,
                     client_id: this.clientId,
-                    client_secret: 'YOUR_CLIENT_SECRET', // Replace with your Spotify Client Secret
+                    client_secret: '458350db97d74b51bb52d92b4243f651', // Replace with your Spotify Client Secret
                 }),
             });
 
